@@ -1,5 +1,3 @@
-console.log('Browser script running !')
-
 const weatherForm = document.querySelector('form')
 const searchLocation = document.querySelector('input')
 const message1 = document.querySelector('#message-1')
