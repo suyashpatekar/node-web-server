@@ -8,7 +8,8 @@ const forecast = (latitude,longitude,callback) => {
         }else if(body.error){
             callback("Try different Location ",undefined)
         }else{
-            callback(undefined,`${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out, and there are ${body.currently.precipProbability} % chances of rain today.`)
+            callback(undefined,`${body.daily.data[0].summary} It is currently ${body.currently.temperature} degrees out. With minimum temprature:${body.daily.data[0].temperatureMin} and maximum temprature:${body.daily.data[0].temperatureMax} , 
+            and there are ${body.currently.precipProbability} % chances of rain today.`)
         }
     })
 }
